@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchResult } from './SearchResult';
+import { AppService } from './app.service';
 
 @Component({
     selector: 'app-home',
@@ -11,7 +12,8 @@ import { SearchResult } from './SearchResult';
     searchWord = '';
     results: SearchResult[] = [];
     search(): void {
-        this.results = [{title: 'test1', content: 'content1'}, {title: 'test2', content: 'content2'}];
+        this.service.searchWord(this.searchWord).then(r => this.results = r);
     }
+    constructor(private service: AppService) {}
   }
 

@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
+import { AppService } from './app.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     HttpModule
   ],
   providers: [
+    AppService
   ],
   bootstrap: [AppComponent]
 })
