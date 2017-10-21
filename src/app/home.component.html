@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<input [(ngModel)]="searchWord" placeholder="Type in a word or phrase">
+<button (click)="search()">Search</button>
+<ul>
+    <li *ngFor="let result of results">
+        <span>{{result.title}}</span>
+        <div>{{result.content}}</div>
+    </li>
+</ul>
