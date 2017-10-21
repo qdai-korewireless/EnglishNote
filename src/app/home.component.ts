@@ -8,7 +8,7 @@ import { AppService } from './app.service';
     styleUrls: ['./app.component.css']
   })
   export class HomeComponent {
-    title = 'Search a English Word or Phrase';
+    title = 'Search a English Word or Phrase!';
     searchWord = '';
     results: SearchResult[] = [];
     search(): void {
